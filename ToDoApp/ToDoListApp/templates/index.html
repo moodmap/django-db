@@ -1,0 +1,16 @@
+{% extends "block.html" %}
+
+{% block title %}
+This is a title
+{% endblock %}
+{% block content %}
+  {% if all_people %}
+  <ul>
+    {% for person in all_people %}
+      <li>{{ person.first_name}} {{ person.last_name}}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <h2>Inside block content</h2>
+{% endblock %}
